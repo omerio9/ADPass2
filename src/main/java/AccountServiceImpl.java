@@ -5,7 +5,7 @@ public class AccountServiceImpl implements AccountService {
     }
     @Override
     public void transferMoney(
-            long sourceAccountId, long targetAccountId, double amount) {
+            String sourceAccountId, String targetAccountId, double amount) {
         Account sourceAccount = accountDao.find(sourceAccountId);
         Account targetAccount = accountDao.find(targetAccountId);
         sourceAccount.setBalance(sourceAccount.getBalance() - amount);
@@ -14,13 +14,13 @@ public class AccountServiceImpl implements AccountService {
         accountDao.update(targetAccount);
     }
     @Override
-    public void depositMoney(long accountId, double amount) throws Exception {
+    public void depositMoney(String accountId, double amount) throws Exception {
         Account account = accountDao.find(accountId);
         account.setBalance(account.getBalance() + amount);
         accountDao.update(account);
     }
     @Override
-    public Account getAccount(long accountId) {
+    public Account getAccount(String accountId) {
         return accountDao.find(accountId);
     }
 

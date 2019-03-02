@@ -7,7 +7,7 @@ public class AccountDaoInMemoryImp implements AccountDao {
 
 
     private Map<String, Account> accountsMap = new HashMap<>();
-    Set<Map> set = new HashSet<Map>(accountsMap);
+   // Set<Map> set = new HashSet<Map>(accountsMap);
 
     Account account1 = new Account();
     Account account2 = new Account();
@@ -45,7 +45,7 @@ public class AccountDaoInMemoryImp implements AccountDao {
 
     }
         @Override
-        public Account find ( long accountId){
+        public Account find ( String accountId){
         return accountsMap.get(accountId);
     }
 
