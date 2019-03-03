@@ -1,6 +1,14 @@
 import junit.framework.TestCase;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 public class AccountTest extends TestCase {
 
+    AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+
+             AccountService accountService = applicationContext.getBean("accountService",AccountService.class);
+
+         //   System.out.print("Account 1 balance :" + accountService.getAccount(String.valueOf(1234)).getBalance());
+           // System.out.println("Account 2 balance :" + accountService.getAccount(String.valueOf(2456)).getBalance());
 
 
 }

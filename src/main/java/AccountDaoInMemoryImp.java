@@ -7,7 +7,7 @@ public class AccountDaoInMemoryImp implements AccountDao {
 
 
     private Map<String, Account> accountsMap = new HashMap<>();
-   // Set<Map> set = new HashSet<Map>(accountsMap);
+
 
     Account account1 = new Account();
     Account account2 = new Account();
@@ -17,10 +17,12 @@ public class AccountDaoInMemoryImp implements AccountDao {
         account1.setId("1234");
         account1.setOwnerName("John");
         account1.setBalance(10.0);
+        account1.setAccType("Cheque");
 
         account2.setId("2456");
         account2.setOwnerName("Mary");
         account2.setBalance(20.0);
+        account2.setAccType("savings");
         accountsMap.put(account1.getId(), account1);
         accountsMap.put(account2.getId(), account2);
 

@@ -11,11 +11,11 @@ public class App {
 
             System.out.println("Before Transaction");
             System.out.println("");
-            System.out.println("Account 1 balance :" + accountService.getAccount(String.valueOf(1)).getBalance());
-            System.out.println("Account 2 balance :" + accountService.getAccount(String.valueOf(2)).getBalance());
-            accountService.transferMoney("1", "2", 5.0);
+            System.out.println("Account 1 balance :" + accountService.getAccount(String.valueOf(1234)).getBalance());
+            System.out.println("Account 2 balance :" + accountService.getAccount(String.valueOf(2456)).getBalance());
+            accountService.transferMoney("1234", "2456", 5.0);
             System.out.println("After Transfer");
-            System.out.println("Account 1 balance :" + accountService.getAccount("1").getBalance());
-            System.out.println("Account 2 balance :" + accountService.getAccount("2").getBalance());
+            System.out.println("Account 1 balance :" + accountService.getAccount("1234").getBalance());
+            System.out.println("Account 2 balance :" + accountService.getAccount("2456").getBalance());
         }
     }

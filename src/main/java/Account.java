@@ -4,6 +4,16 @@ public class Account {
 
     private String id;
     private  String ownerName;
+
+    public String getAccType() {
+        return accType;
+    }
+
+    public void setAccType(String accType) {
+        this.accType = accType;
+    }
+
+    private String accType;
     private double balance;
     private Date accessTime;
 
